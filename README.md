@@ -53,25 +53,13 @@ The open contract engine and developer SDK behind **NVIDIA OmniDreams ($DREAMS)*
 
 ## Architecture & Value Flow
 
-```mermaid
-graph LR
-    subgraph Research [01 / Research]
-        NR[NVIDIA Toronto AI Lab] --> WM[Generative World Models]
-    end
-
-    subgraph Launchpad [02 / Pons v2 Curve]
-        WM --> BC[1B $DREAMS Fixed Supply]
-        BC --> AS[5s Anti-Snipe Decay]
-    end
-
-    subgraph Settlement [03 / Robinhood Chain]
-        AS --> L2[EVM L2 · Sub-cent Gas]
-    end
-
-    subgraph Rewards [04 / FeeEscrow]
-        L2 --> FE[1.8% Protocol Tax Pool]
-        FE --> NVDA[Tokenized $NVDA Stock Yield]
-    end
+```text
+┌──────────────────────┐      ┌──────────────────────┐      ┌──────────────────────┐      ┌──────────────────────┐
+│    01 / RESEARCH     │      │   02 / PONS CURVE    │      │  03 / HOOD CHAIN L2  │      │   04 / FEE ESCROW    │
+├──────────────────────┤      ├──────────────────────┤      ├──────────────────────┤      ├──────────────────────┤
+│ NVIDIA Research Lab  │ ───► │ 1B $DREAMS Supply    │ ───► │ Sub-cent Gas Finality│ ───► │ 1.8% Fee Allocation  │
+│ World Model Sim      │      │ 5s Anti-Snipe Decay  │      │ Tokenized NVDA Pair  │      │ Direct $NVDA Rewards │
+└──────────────────────┘      └──────────────────────┘      └──────────────────────┘      └──────────────────────┘
 ```
 
 ---
