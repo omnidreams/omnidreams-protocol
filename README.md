@@ -10,6 +10,7 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/omnidreams/omnidreams-protocol/actions/workflows/test.yml"><img src="https://img.shields.io/github/actions/workflow/status/omnidreams/omnidreams-protocol/test.yml?branch=main&style=flat-square&label=tests&logo=github&color=A3E635" alt="Tests"></a>
   <a href="https://omnidreams.xyz"><img src="https://img.shields.io/badge/Website-omnidreams.xyz-111111?style=flat-square&logo=google-chrome&logoColor=A3E635" alt="Website"></a>
   <a href="https://x.com/Gemesis_Group"><img src="https://img.shields.io/badge/Twitter-@Gemesis__Group-111111?style=flat-square&logo=x&logoColor=white" alt="Twitter"></a>
   <a href="https://ponsfamily.com/launchpad/create"><img src="https://img.shields.io/badge/Launchpad-Pons%20v2-111111?style=flat-square&logo=ethereum&logoColor=A3E635" alt="Launchpad"></a>
@@ -38,6 +39,9 @@ The open contract engine and developer SDK behind **NVIDIA OmniDreams ($DREAMS)*
 │   └── FeeEscrowDistributor.sol  # 1.8% volume routing to tokenized $NVDA shares
 ├── sdk/
 │   └── index.mjs                 # Integration toolkit, integer math & fee preview
+├── docs/
+│   ├── ARCHITECTURE.md           # Mathematical tokenomics & FeeEscrow mechanics
+│   └── DEPLOYMENT.md             # Onchain verification & Robinhood Chain L2 parameters
 ├── examples/
 │   └── preview.mjs               # Offline runnable integration preview
 ├── test/
@@ -101,6 +105,7 @@ bun examples/preview.mjs
 
 This repository isolates the contract engine, mathematical models, and integration toolkit for NVIDIA OmniDreams. No private keys, deployer secrets, or hosted RPC credentials are committed.
 
+- **Architecture Details:** See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 - **Audits & Security:** Report issues to `security@omnidreams.xyz`. See [SECURITY.md](SECURITY.md).
 - **Contributions:** Pull requests are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
