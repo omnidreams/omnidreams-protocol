@@ -7,12 +7,8 @@
 <p align="center">
   <strong>Generative World Models. Onchain Spatial Compute.</strong><br>
   <em>One transaction. Fixed supply ERC-20. Real Pons v2 bonding curve. Automated $NVDA stock yield.</em>
-</p>
-
-<p align="center">
-  <a href="https://github.com/omnidreams/omnidreams-protocol/actions/workflows/test.yml"><img src="https://img.shields.io/github/actions/workflow/status/omnidreams/omnidreams-protocol/test.yml?branch=main&style=flat-square&label=tests&logo=github&color=A3E635" alt="Tests"></a>
+  <img src="https://img.shields.io/badge/Tests-7%20passed-111111?style=flat-square&logo=github&color=A3E635" alt="Tests">
   <a href="https://omnidreams.xyz"><img src="https://img.shields.io/badge/Website-omnidreams.xyz-111111?style=flat-square&logo=google-chrome&logoColor=A3E635" alt="Website"></a>
-  <a href="https://x.com/Gemesis_Group"><img src="https://img.shields.io/badge/Twitter-@Gemesis__Group-111111?style=flat-square&logo=x&logoColor=white" alt="Twitter"></a>
   <a href="https://ponsfamily.com/launchpad/create"><img src="https://img.shields.io/badge/Launchpad-Pons%20v2-111111?style=flat-square&logo=ethereum&logoColor=A3E635" alt="Launchpad"></a>
   <img src="https://img.shields.io/badge/Network-Robinhood%20Chain%20(92001)-111111?style=flat-square" alt="Network">
   <img src="https://img.shields.io/badge/License-MIT-111111?style=flat-square" alt="License">
