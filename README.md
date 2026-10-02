@@ -1,37 +1,57 @@
-# NVIDIA OmniDreams ($DREAMS) Protocol
+# NVIDIA OmniDreams ($DREAMS) Protocol Core
 
 <p align="center">
-  <img src="website/emblem.svg" alt="OmniDreams Logo" width="110" height="110" />
+  <img src="website/emblem.svg" alt="OmniDreams Emblem" width="90" height="90" />
 </p>
 
 <p align="center">
   <strong>Generative World Models. Onchain Spatial Compute.</strong><br>
-  <em>Bridging NVIDIA Research spatial simulation architectures directly to Robinhood Chain (EVM L2).</em>
+  <em>One transaction. Fixed supply ERC-20. Real Pons v2 bonding curve. Automated $NVDA stock yield.</em>
 </p>
 
 <p align="center">
-  <a href="https://omnidreams.xyz"><img src="https://img.shields.io/badge/Website-omnidreams.xyz-101412?style=flat-square&logo=google-chrome&logoColor=76B900" alt="Website"></a>
-  <a href="https://x.com/Gemesis_Group"><img src="https://img.shields.io/badge/Twitter-@Gemesis__Group-101412?style=flat-square&logo=x&logoColor=white" alt="Twitter"></a>
-  <a href="https://ponsfamily.com/launchpad/create"><img src="https://img.shields.io/badge/Launchpad-Pons%20v2-101412?style=flat-square&logo=ethereum&logoColor=76B900" alt="Launchpad"></a>
-  <img src="https://img.shields.io/badge/Network-Robinhood%20Chain%20(92001)-101412?style=flat-square" alt="Network">
-  <img src="https://img.shields.io/badge/License-MIT-101412?style=flat-square" alt="License">
+  <a href="https://omnidreams.xyz"><img src="https://img.shields.io/badge/Website-omnidreams.xyz-111111?style=flat-square&logo=google-chrome&logoColor=A3E635" alt="Website"></a>
+  <a href="https://x.com/Gemesis_Group"><img src="https://img.shields.io/badge/Twitter-@Gemesis__Group-111111?style=flat-square&logo=x&logoColor=white" alt="Twitter"></a>
+  <a href="https://ponsfamily.com/launchpad/create"><img src="https://img.shields.io/badge/Launchpad-Pons%20v2-111111?style=flat-square&logo=ethereum&logoColor=A3E635" alt="Launchpad"></a>
+  <img src="https://img.shields.io/badge/Network-Robinhood%20Chain%20(92001)-111111?style=flat-square" alt="Network">
+  <img src="https://img.shields.io/badge/License-MIT-111111?style=flat-square" alt="License">
 </p>
 
 ---
 
-## 1. Overview
+## What Makes It Useful
 
-**NVIDIA OmniDreams ($DREAMS)** is a decentralized token protocol inspired by foundational generative world model research from **NVIDIA Research / Toronto AI Lab**. It pioneers the stock dividend narrative on **Robinhood Chain (EVM L2 · Chain ID: 92001)**, pairing generative spatial compute narratives natively with tokenized **$NVDA** stock distributions.
-
-### Core Technical Pillars:
-- **100% Fair Launch:** 1,000,000,000 fixed supply minted directly into the Pons v2 bonding curve. Zero team pre-allocation.
-- **Anti-Snipe Protection:** 99% penalty decay over 5 blocks / seconds post-deployment to guarantee fair organic distribution.
-- **Automated $NVDA Dividends:** 1.8% (180 BPS) fee collected on secondary volume via Pons `FeeEscrow` and routed directly into tokenized NVIDIA stock ($NVDA) shares.
-- **Permanent Liquidity Graduation:** 100% reserve liquidity migrated and burned on Uniswap v4 via `LaunchLocker` at $68,000 market cap threshold.
+The open contract engine and developer SDK behind **NVIDIA OmniDreams ($DREAMS)**:
+- **Autonomous Spatial Models:** Bridging generative physical world simulations from NVIDIA Research / Toronto AI Lab directly to decentralized execution.
+- **Fixed Supply & Fair Curve:** 1,000,000,000 tokens minted once directly into the Pons v2 bonding curve. Zero developer pre-allocation.
+- **Anti-Snipe Protection:** 99% penalty decay over 5 blocks / seconds post-deployment to protect organic participants.
+- **Automated $NVDA Dividends:** 1.8% (180 BPS) fee collected on every buy/sell trade via Pons `FeeEscrow` and routed into tokenized NVIDIA stock ($NVDA) yield pools.
+- **Permanent Liquidity Lock:** 100% reserve liquidity migrated and burned on Uniswap v4 via `LaunchLocker` at $68,000 market cap threshold.
 
 ---
 
-## 2. Architecture & Data Flow
+## Repository Structure
+
+```text
+├── contracts/
+│   ├── OmniDreamsToken.sol       # Production ERC-20 fixed-supply token
+│   └── FeeEscrowDistributor.sol  # 1.8% volume routing to tokenized $NVDA shares
+├── sdk/
+│   └── index.mjs                 # Integration toolkit, integer math & fee preview
+├── examples/
+│   └── preview.mjs               # Offline runnable integration preview
+├── test/
+│   └── sdk.test.mjs              # Automated mathematical & invariant unit tests
+├── website/                      # High-density dark engineering landing page
+├── foundry.toml                  # Pinned Solidity 0.8.20 compiler configuration
+├── CONTRIBUTING.md               # Developer contribution guidelines
+├── SECURITY.md                   # Security disclosure policy
+└── LICENSE                       # MIT License
+```
+
+---
+
+## Architecture & Value Flow
 
 ```mermaid
 graph LR
@@ -56,12 +76,29 @@ graph LR
 
 ---
 
-## 3. Verifiable Onchain Parameters
+## Quick Start & Integration Toolkit
 
-| Parameter | Value | Verification |
+### Install Dependencies & Run Tests
+
+```bash
+git clone https://github.com/omnidreams/omnidreams-protocol.git
+cd omnidreams-protocol
+bun test
+```
+
+### Run SDK Example
+```bash
+bun examples/preview.mjs
+```
+
+---
+
+## Contract Surface & Verifiable Parameters
+
+| Entry point / Parameter | Value / Signature | Purpose |
 | :--- | :--- | :--- |
-| **Token Name** | `NVIDIA OmniDreams` | ERC-20 Standard (Fixed Supply) |
-| **Token Symbol** | `$DREAMS` | Trading Ticker |
+| **Token Name** | `NVIDIA OmniDreams` | Canonical token name |
+| **Token Symbol** | `$DREAMS` | Trading ticker |
 | **Network** | Robinhood Chain (HOOD) | EVM L2 (Chain ID: `92001`) |
 | **Quote Asset** | `NVDA` | Tokenized NVIDIA Stock |
 | **Total Supply** | `1,000,000,000 DREAMS` | Fixed, No Mint, No Blacklist |
@@ -72,53 +109,15 @@ graph LR
 
 ---
 
-## 4. Smart Contract Architecture
+## Scope & Trust
 
-The repository is organized into modular Solidity contracts compatible with Foundry and Hardhat:
+This repository isolates the contract engine, mathematical models, and integration toolkit for NVIDIA OmniDreams. No private keys, deployer secrets, or hosted RPC credentials are committed.
 
-```text
-contracts/
-├── OmniDreamsToken.sol          # Immutable ERC-20 token implementation
-├── FeeEscrowDistributor.sol     # 1.8% volume routing to tokenized $NVDA
-└── interfaces/
-    ├── IPonsBondingCurve.sol    # Pons v2 Launchpad interface
-    └── ILaunchLocker.sol        # Uniswap v4 permanent lock interface
-```
-
-### Key Safety Invariants:
-1. **No Mint Function:** Total supply capped permanently at 1,000,000,000 tokens.
-2. **No Proxy / Upgradeability:** Logic is completely immutable upon deployment.
-3. **No Blacklist or Pause:** Transfers cannot be selectively frozen by any key.
+- **Audits & Security:** Report issues to `security@omnidreams.xyz`. See [SECURITY.md](SECURITY.md).
+- **Contributions:** Pull requests are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ---
 
-## 5. Development & Testing
+## License
 
-### Prerequisites
-- [Foundry](https://getfoundry.sh/) (Forge & Cast) or [Bun](https://bun.sh) / Node.js
-- RPC Endpoint: `https://rpc.robinhood.com` (Chain ID: `92001`)
-
-### Build
-```bash
-forge build
-```
-
-### Run Tests
-```bash
-forge test -vvv
-```
-
----
-
-## 6. Official Links & Community
-
-- **Website & Terminal:** [https://omnidreams.xyz](https://omnidreams.xyz)
-- **Twitter / X:** [https://x.com/Gemesis_Group](https://x.com/Gemesis_Group)
-- **Launchpad:** [https://ponsfamily.com/launchpad/create](https://ponsfamily.com/launchpad/create)
-- **NVIDIA Research:** [https://research.nvidia.com/research-area/generative-ai](https://research.nvidia.com/research-area/generative-ai)
-
----
-
-## 7. License
-
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the [MIT License](LICENSE).

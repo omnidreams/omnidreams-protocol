@@ -1,0 +1,21 @@
+{
+  "name": "@omnidreams/sdk",
+  "version": "1.0.0",
+  "description": "Integration toolkit & spatial compute telemetry SDK for NVIDIA OmniDreams ($DREAMS) Protocol",
+  "type": "module",
+  "main": "sdk/index.mjs",
+  "scripts": {
+    "test": "node test/sdk.test.mjs",
+    "example": "node examples/preview.mjs"
+  },
+  "keywords": [
+    "world-models",
+    "spatial-ai",
+    "nvidia",
+    "robinhood-chain",
+    "defi",
+    "bonding-curve"
+  ],
+  "author": "OmniDreams Protocol Foundation",
+  "license": "MIT"
+}
