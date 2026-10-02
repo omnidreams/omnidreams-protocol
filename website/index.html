@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NVIDIA OmniDreams ($DREAMS) · Generative World Models on Robinhood Chain</title>
+  <meta name="description" content="Bridging NVIDIA Research generative world models to Robinhood Chain. Paired with tokenized $NVDA with 1.8% FeeEscrow volume rewards.">
+  <meta name="theme-color" content="#090C0A">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="NVIDIA OmniDreams ($DREAMS) · Spatial Compute Protocol">
+  <meta property="og:description" content="Generative world model intelligence on Robinhood Chain ($HOOD). Fair launch on Pons v2 with automated tokenized $NVDA stock rewards.">
+  <meta property="og:image" content="emblem.svg">
+  <meta property="og:type" content="website">
+
+  <!-- Inter Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="emblem.svg">
+</head>
+<body class="canvas-base">
+
+  <!-- 1. Sticky Navigation Bar -->
+  <header class="nav-bar">
+    <div class="nav-container">
+      
+      <!-- Brand Logo & Clean Minimalist Wordmark -->
+      <a href="#" class="brand-link" aria-label="OmniDreams Home">
+        <div class="brand-logo-icon">
+          <img src="emblem.svg" alt="OmniDreams Emblem" class="brand-icon-svg">
+        </div>
+        <span class="brand-wordmark">omnidreams</span>
+      </a>
+
+      <!-- Desktop Navigation Links (Clean minimal spacing) -->
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="#hero" class="nav-link">Terminal</a>
+        <a href="#architecture" class="nav-link">How it works</a>
+        <a href="#curve" class="nav-link">Bonding curve</a>
+        <a href="#activity" class="nav-link">Live activity</a>
+        <a href="#dividends" class="nav-link">Fee sharing</a>
+        <a href="#specifications" class="nav-link">Specs</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+      <!-- Right Action Controls (Clean Ghost X icon + Pill Connect/Trade Button) -->
+      <div class="nav-actions">
+        <!-- GitHub Link -->
+        <a href="https://github.com/omnidreams/omnidreams-protocol" target="_blank" rel="noopener noreferrer" class="btn-ghost-icon" aria-label="OmniDreams on GitHub">
+          <svg class="svg-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+        </a>
+
+        <!-- Twitter/X Ghost Button -->
+        <a href="https://x.com/Gemesis_Group" target="_blank" rel="noopener noreferrer" class="btn-ghost-icon" aria-label="OmniDreams on X">
+          <svg class="svg-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+        <!-- Secondary Subtle Action: Research Paper -->
+        <a href="https://research.nvidia.com/research-area/generative-ai" target="_blank" rel="noopener noreferrer" class="btn-subtle-nav hidden-mobile">
+          <span>Paper</span>
+          <svg class="svg-icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+          </svg>
+        </a>
+
+        <!-- Primary Clean Solid Action: Trade / Connect -->
+        <a href="https://ponsfamily.com/launchpad/create" target="_blank" rel="noopener noreferrer" class="btn-vamp-nav">
+          <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/>
+          </svg>
+          <span>Trade on Pons</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" class="btn-ghost-icon mobile-only" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Dropdown -->
+    <div id="mobile-nav" class="mobile-menu hidden">
+      <div class="mobile-menu-links">
+        <a href="#hero" class="mobile-nav-link">Terminal</a>
+        <a href="#architecture" class="mobile-nav-link">Architecture</a>
+        <a href="#curve" class="mobile-nav-link">Bonding Curve</a>
+        <a href="#activity" class="mobile-nav-link">Activity</a>
+        <a href="#dividends" class="mobile-nav-link">Dividends</a>
+        <a href="#specifications" class="mobile-nav-link">Specs</a>
+        <a href="#faq" class="mobile-nav-link">FAQ</a>
+        <a href="https://research.nvidia.com/research-area/generative-ai" target="_blank" class="mobile-nav-link text-accent">NVIDIA Research Paper ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. Hero Section: Asymmetric Split Screen with Interactive Spatial Canvas & Pons Terminal -->
+  <section id="hero" class="hero-section">
+    <!-- Subtle architectural background grid -->
+    <div class="hero-art-bg">
+      <div class="art-grid"></div>
+      <div class="orbit orbit-1"></div>
+      <div class="orbit orbit-2"></div>
+      <div class="orbit orbit-3"></div>
+    </div>
+
+    <div class="site-container relative-z">
+      <div class="hero-grid">
+        
+        <!-- Left Column: Core Narrative (Clean, soft, human typography) -->
+        <div class="hero-left">
+          
+          <!-- Main Hero Headline -->
+          <h1 class="hero-title">
+            Generative world models.<br>
+            <span class="text-secondary">Onchain spatial compute.</span>
+          </h1>
+
+          <!-- Value Thesis -->
+          <p class="hero-description">
+            Bring foundational spatial intelligence from NVIDIA Research to Robinhood Chain. Pair natively with tokenized $NVDA and share trading fees with holders.
+          </p>
+
+          <!-- Action CTAs -->
+          <div class="hero-cta-group">
+            <a href="https://ponsfamily.com/launchpad/create" target="_blank" rel="noopener noreferrer" class="btn-hero-primary">
+              <span>Trade on Pons</span>
+              <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 7h10v10M7 17 17 7"/>
+              </svg>
+            </a>
+            <a href="#architecture" onclick="event.preventDefault(); var target = document.getElementById('architecture'); if(target){ var top = target.getBoundingClientRect().top + window.pageYOffset - 76; window.scrollTo({ top: top, behavior: 'smooth' }); }" class="btn-hero-ghost">
+              <span>How it works</span>
+              <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M19 12l-7 7-7-7"/>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Minimal Clean CA Line -->
+          <div class="hero-ca-line">
+            <span class="ca-label">CA</span>
+            <code class="ca-mono" id="ca-address-display">SOON... (Revealing on Pons v2 Launch)</code>
+            <button id="copy-ca-btn" class="btn-copy-inline" aria-label="Copy Contract Address">
+              <svg class="svg-icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Quick Metrics Minimal Line -->
+          <div class="hero-stats-line">
+            <div class="stat-pill">
+              <span class="stat-k">Start MC:</span>
+              <span class="stat-v">$3,800</span>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-k">Target:</span>
+              <span class="stat-v text-accent">$68,000</span>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-k">Fee tax:</span>
+              <span class="stat-v">1.8% $NVDA</span>
+            </div>
+          </div>
+
+        </div>
+        <!-- Right Column: Interactive Pons v2 Swap Terminal Simulator -->
+        <div class="hero-right">
+          <div class="terminal-panel">
+            
+            <div class="terminal-header">
+              <div class="terminal-title-wrap">
+                <div class="terminal-dot"></div>
+                <span class="terminal-heading">Pons v2 Swap Terminal Simulator</span>
+              </div>
+              <span class="terminal-badge">LIVE BONDING CURVE</span>
+            </div>
+
+            <div class="terminal-body">
+              
+              <!-- Input: Pay Token -->
+              <div class="swap-input-group">
+                <div class="swap-label-row">
+                  <span class="swap-label">You Pay</span>
+                  <span class="swap-balance font-mono">Est. Gas: &lt;$0.01</span>
+                </div>
+                <div class="swap-input-row">
+                  <input id="swap-input-amount" type="number" step="0.01" min="0.01" max="10" value="0.10" class="swap-input font-mono" placeholder="0.0">
+                  <div class="token-selector">
+                    <span class="token-badge">ETH</span>
+                  </div>
+                </div>
+                <!-- Quick preset chips -->
+                <div class="preset-chips">
+                  <button type="button" class="preset-btn" data-val="0.05">0.05 ETH</button>
+                  <button type="button" class="preset-btn active" data-val="0.10">0.10 ETH</button>
+                  <button type="button" class="preset-btn" data-val="0.25">0.25 ETH</button>
+                  <button type="button" class="preset-btn" data-val="0.50">0.50 ETH</button>
+                </div>
+              </div>
+
+              <!-- Swap Arrow Indicator -->
+              <div class="swap-divider">
+                <div class="swap-divider-line"></div>
+                <div class="swap-divider-icon">
+                  <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                  </svg>
+                </div>
+                <div class="swap-divider-line"></div>
+              </div>
+
+              <!-- Output: Receive Token -->
+              <div class="swap-input-group">
+                <div class="swap-label-row">
+                  <span class="swap-label">You Receive (Estimated)</span>
+                  <span class="swap-balance font-mono">Supply Share: <strong id="swap-share-val" class="text-white">2.63%</strong></span>
+                </div>
+                <div class="swap-input-row">
+                  <input id="swap-output-amount" type="text" readonly value="26,315,789" class="swap-input font-mono text-accent">
+                  <div class="token-selector">
+                    <img src="emblem.svg" alt="DREAMS" class="token-icon">
+                    <span class="token-badge">$DREAMS</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slippage Selector -->
+              <div class="slippage-row">
+                <span class="slippage-label">Slippage Tolerance</span>
+                <div class="slippage-options">
+                  <button type="button" class="slip-btn" data-slip="2.5">2.5%</button>
+                  <button type="button" class="slip-btn active" data-slip="3.5">3.5%</button>
+                  <button type="button" class="slip-btn" data-slip="5.0">5.0%</button>
+                </div>
+              </div>
+
+              <!-- Execution Breakdown -->
+              <div class="breakdown-box">
+                <div class="breakdown-row">
+                  <span class="breakdown-key">Bonding Curve Rate</span>
+                  <span id="breakdown-rate" class="breakdown-val font-mono">1 ETH ≈ 263,157,890 DREAMS</span>
+                </div>
+                <div class="breakdown-row">
+                  <span class="breakdown-key">Pons FeeEscrow (1.8% $NVDA Pool)</span>
+                  <span id="breakdown-tax" class="breakdown-val font-mono">0.0018 ETH ($5.40)</span>
+                </div>
+                <div class="breakdown-row">
+                  <span class="breakdown-key">Price Impact</span>
+                  <span id="breakdown-impact" class="breakdown-val font-mono">&lt; 0.12%</span>
+                </div>
+                <div class="breakdown-row">
+                  <span class="breakdown-key">Anti-Snipe Protection</span>
+                  <span class="breakdown-val font-mono text-accent">5s Decay Curve Active</span>
+                </div>
+              </div>
+
+              <!-- Execute Action Button -->
+              <a href="https://ponsfamily.com/launchpad/create" target="_blank" rel="noopener noreferrer" class="btn-primary w-full text-center">
+                <span>Swap on Pons v2 Launchpad</span>
+                <svg class="svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                </svg>
+              </a>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Protocol Architecture & Animated SVG Connector Flow -->
+  <section id="architecture" class="section-divider">
+    <div class="site-container">
+      
+      <div class="section-head">
+        <div class="section-tag">ENGINEERING ARCHITECTURE</div>
+        <h2 class="section-title">End-to-End Generative Execution Pipeline</h2>
+        <p class="section-subtitle">
+          Autonomous spatial compute models executed on EVM L2, distributing verifiable dividend yields on every trade.
+        </p>
+      </div>
+
+      <!-- Animated SVG Connecting Beam Pipeline Overlay -->
+      <div class="pipeline-wrapper">
+        
+        <!-- Desktop SVG Flow Path (Hidden on Mobile) -->
+        <div class="svg-flow-container hidden-mobile" aria-hidden="true">
+          <svg class="flow-svg" viewBox="0 0 1150 180" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="flowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#76B900" stop-opacity="0.2"/>
+                <stop offset="50%" stop-color="#76B900" stop-opacity="0.9"/>
+                <stop offset="100%" stop-color="#76B900" stop-opacity="0.2"/>
+              </linearGradient>
+            </defs>
+            <!-- Background base line -->
+            <path d="M 140 90 L 425 90 L 715 90 L 1000 90" class="flow-line-base" />
+            <!-- Animated flowing dash line -->
+            <path d="M 140 90 L 425 90 L 715 90 L 1000 90" class="flow-line-animated" />
+          </svg>
+        </div>
+
+        <!-- Pipeline 4-Node Sequence -->
+        <div class="pipeline-grid">
+          
+          <!-- Node 1 -->
+          <div class="panel-card pipeline-card">
+            <div class="card-top">
+              <div class="card-num font-mono">01 / RESEARCH</div>
+              <div class="card-icon-wrap">
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="card-title">NVIDIA Research Lab</h3>
+            <p class="card-body">
+              Autonomous physics simulations and generative world model architecture developed by NVIDIA Toronto AI Lab.
+            </p>
+            <div class="card-footer font-mono">
+              Spatial Geometry Matrix
+            </div>
+          </div>
+
+          <!-- Node 2 -->
+          <div class="panel-card pipeline-card active-border">
+            <div class="card-top">
+              <div class="card-num font-mono text-accent">02 / FAIR LAUNCH</div>
+              <div class="card-icon-wrap active-icon">
+                <img src="emblem.svg" alt="Token Asset" class="card-custom-icon">
+              </div>
+            </div>
+            <h3 class="card-title">$DREAMS Bonding Curve</h3>
+            <p class="card-body">
+              1,000,000,000 fixed supply minted directly to Pons v2 bonding curve. Zero developer pre-allocation.
+            </p>
+            <div class="card-footer font-mono">
+              5s Decay Anti-Snipe
+            </div>
+          </div>
+
+          <!-- Node 3 -->
+          <div class="panel-card pipeline-card">
+            <div class="card-top">
+              <div class="card-num font-mono">03 / SETTLEMENT</div>
+              <div class="card-icon-wrap">
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="card-title">Robinhood Chain L2</h3>
+            <p class="card-body">
+              Sub-cent transaction execution with instant L2 finality. Native interoperability with tokenized equity markets.
+            </p>
+            <div class="card-footer font-mono">
+              EVM Chain ID: 92001
+            </div>
+          </div>
+
+          <!-- Node 4 -->
+          <div class="panel-card pipeline-card">
+            <div class="card-top">
+              <div class="card-num font-mono">04 / REWARDS</div>
+              <div class="card-icon-wrap">
+                <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="card-title">FeeEscrow $NVDA Yield</h3>
+            <p class="card-body">
+              1.8% volume tax automatically routed into tokenized $NVDA stock rewards, distributed pro-rata to token holders.
+            </p>
+            <div class="card-footer font-mono">
+              Direct Autonomous Distribution
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. Interactive Dynamic Bonding Curve Chart & Milestone Road -->
+  <section id="curve" class="section-pad">
+    <div class="site-container">
+      
+      <div class="section-head">
+        <div class="section-tag">CURVE TELEMETRY & LIQUIDITY DEPTH</div>
+        <h2 class="section-title">Bonding Curve Dynamic Progression & Graduation</h2>
+        <p class="section-subtitle">
+          Explore interactive price impact along the bonding curve from initial trench launch to Uniswap v4 permanent lock.
+        </p>
+      </div>
+
+      <div class="panel-card curve-panel">
+        
+        <!-- Progress Bar Visual Header -->
+        <div class="curve-progress-header">
+          <div>
+            <span class="curve-subhead">Bonding Curve Progress</span>
+            <div class="curve-mc-row">
+              <span id="curve-current-mc" class="curve-mc font-mono">$12,450 MC</span>
+              <span class="curve-percent font-mono text-accent">18.3% Completed</span>
+            </div>
+          </div>
+          <div class="curve-target-wrap">
+            <span class="curve-subhead">Graduation Threshold</span>
+            <span class="curve-target font-mono">$68,000 Market Cap</span>
+          </div>
+        </div>
+
+        <!-- Custom Progress Track -->
+        <div class="progress-track" role="progressbar" aria-valuenow="18.3" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-fill" style="width: 18.3%;"></div>
+        </div>
+
+        <!-- Dynamic Canvas Curve Visualizer -->
+        <div class="curve-chart-card">
+          <div class="curve-chart-header">
+            <div class="flex-center gap-2">
+              <span class="chart-legend-dot"></span>
+              <span class="font-mono text-xs text-primary">PRICE FUNCTION: P(s) = k · s²</span>
+            </div>
+            <div class="font-mono text-xs text-secondary" id="curve-hover-info">
+              Hover along curve to inspect price points
+            </div>
+          </div>
+          <div class="curve-canvas-wrap">
+            <canvas id="bonding-curve-canvas" width="1100" height="220" class="curve-canvas"></canvas>
+          </div>
+        </div>
+
+        <!-- Milestone Road Markers -->
+        <div class="milestones-grid">
+          
+          <div class="milestone-card completed">
+            <div class="milestone-status font-mono">STEP 01 · INITIALIZED</div>
+            <div class="milestone-val font-mono">$3,800 MC</div>
+            <p class="milestone-desc">Trench fair launch deployed on Pons v2. Initial creator allocation (0.15 ETH) secured.</p>
+          </div>
+
+          <div class="milestone-card active">
+            <div class="milestone-status font-mono text-accent">STEP 02 · 2.0x TRIGGER</div>
+            <div class="milestone-val font-mono">$7,600 MC</div>
+            <p class="milestone-desc">TP1 automated trigger: 30% developer allocation exited. 100% initial principal secured.</p>
+          </div>
+
+          <div class="milestone-card">
+            <div class="milestone-status font-mono">STEP 03 · 4.0x TRIGGER</div>
+            <div class="milestone-val font-mono">$15,200 MC</div>
+            <p class="milestone-desc">TP2 automated trigger: secondary 30% developer allocation exited. Net profit locked.</p>
+          </div>
+
+          <div class="milestone-card graduation">
+            <div class="milestone-status font-mono text-accent">STEP 04 · GRADUATION</div>
+            <div class="milestone-val font-mono">$68,000 MC</div>
+            <p class="milestone-desc">100% reserve liquidity migrated to Uniswap v4 and permanently burned via LaunchLocker.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. Real-Time On-Chain Activity HUD & Fee Stream -->
+  <section id="activity" class="section-divider bg-inset">
+    <div class="site-container">
+      
+      <div class="section-head">
+        <div class="section-tag">LIVE TELEMETRY STREAM</div>
+        <h2 class="section-title">Real-Time FeeEscrow On-Chain Stream</h2>
+        <p class="section-subtitle">
+          Live simulated block execution, trade settlement, and $NVDA dividend distributions on Robinhood Chain.
+        </p>
+      </div>
+
+      <div class="activity-hud-container">
+        
+        <!-- Stream Feed Table -->
+        <div class="panel-card activity-feed-panel">
+          <div class="activity-feed-header">
+            <div class="flex-center gap-2">
+              <span class="live-pulse-dot"></span>
+              <span class="font-mono text-xs font-semibold text-primary">ROBINHOOD CHAIN TX FEED</span>
+            </div>
+            <span class="font-mono text-xs text-dim">BLOCK #1,842,904</span>
+          </div>
+
+          <div class="activity-feed-list" id="activity-feed-list">
+            <!-- Dynamic rows rendered via app.js -->
+          </div>
+        </div>
+
+        <!-- Telemetry Live Stats Box -->
+        <div class="activity-stats-column">
+          <div class="panel-card stat-hud-card">
+            <span class="stat-hud-label font-mono">ACCUMULATED $NVDA TAX POOL</span>
+            <div class="stat-hud-val font-mono text-accent" id="hud-tax-pool">$2,184.40</div>
+            <span class="stat-hud-sub font-mono">+1.8% FeeEscrow Active</span>
+          </div>
+
+          <div class="panel-card stat-hud-card">
+            <span class="stat-hud-label font-mono">AVERAGE BLOCK TIME</span>
+            <div class="stat-hud-val font-mono text-white">412 ms</div>
+            <span class="stat-hud-sub font-mono">Robinhood Chain L2 Speed</span>
+          </div>
+
+          <div class="panel-card stat-hud-card">
+            <span class="stat-hud-label font-mono">UNIQUE HOLDERS ESTIMATE</span>
+            <div class="stat-hud-val font-mono text-white" id="hud-holders-count">184</div>
+            <span class="stat-hud-sub font-mono">Growing on Curve</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 6. Interactive $NVDA Dividend Matrix (Fluid Spring Sliders) -->
+  <section id="dividends" class="section-pad">
+    <div class="site-container">
+      
+      <div class="section-head">
+        <div class="section-tag">YIELD SIMULATOR</div>
+        <h2 class="section-title">Interactive $NVDA Dividend Matrix</h2>
+        <p class="section-subtitle">
+          Simulate projected tokenized stock rewards generated through the 1.8% FeeEscrow volume distribution engine.
+        </p>
+      </div>
+
+      <div class="panel-card dividend-matrix">
+        <div class="matrix-grid">
+          
+          <!-- Left Column: Fluid Sliders -->
+          <div class="matrix-controls">
+            
+            <!-- Volume Slider -->
+            <div class="control-group">
+              <div class="control-header">
+                <label for="slider-volume" class="control-label">24-Hour Trading Volume</label>
+                <span id="val-volume" class="control-val font-mono text-accent">$30,000</span>
+              </div>
+              <input id="slider-volume" type="range" min="5000" max="250000" step="5000" value="30000" class="range-slider">
+              <div class="range-bounds font-mono">
+                <span>$5K (Launch)</span>
+                <span>$100K</span>
+                <span>$250K+ (Trending)</span>
+              </div>
+            </div>
+
+            <!-- Holding Bag Slider -->
+            <div class="control-group">
+              <div class="control-header">
+                <label for="slider-bag" class="control-label">Your $DREAMS Holding Size</label>
+                <span id="val-bag" class="control-val font-mono">10,000,000 (1.00%)</span>
+              </div>
+              <input id="slider-bag" type="range" min="1" max="50" step="1" value="10" class="range-slider">
+              <div class="range-bounds font-mono">
+                <span>1M (0.1%)</span>
+                <span>25M (2.5%)</span>
+                <span>50M (5.0% Cap)</span>
+              </div>
+            </div>
+
+            <!-- Technical Note -->
+            <div class="spec-note">
+              <div class="spec-note-title font-mono">FEEESCROW MECHANISM:</div>
+              <p class="spec-note-body">
+                1.8% (180 BPS) of all buy and sell volume is collected by Pons FeeEscrow in tokenized $NVDA shares. Zero lockup or staking required: distribution scales dynamically with volume.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Computed Telemetry Cards -->
+          <div class="matrix-results">
+            
+            <div class="result-tile">
+              <span class="result-label font-mono">Total 24h Tax Pool (1.8%)</span>
+              <span id="out-total-tax" class="result-figure font-mono">$540.00</span>
+            </div>
+
+            <div class="result-tile highlight">
+              <span class="result-label font-mono text-accent">Your Projected Daily $NVDA Yield</span>
+              <div class="result-figure-wrap">
+                <span id="out-daily-payout" class="result-figure font-mono text-white">$5.40</span>
+                <span class="result-unit font-mono">/ 24h</span>
+              </div>
+            </div>
+
+            <div class="result-tile">
+              <span class="result-label font-mono">Projected Monthly Rewards (30D)</span>
+              <div class="result-figure-wrap">
+                <span id="out-monthly-payout" class="result-figure font-mono text-accent">$162.00</span>
+                <span class="result-unit font-mono">/ 30 days</span>
+              </div>
+            </div>
+
+            <div class="result-tile apr-tile">
+              <span class="result-label font-mono">Estimated Annualized Return</span>
+              <span id="out-projected-apy" class="apr-badge font-mono">+236.5% APR</span>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 7. Technical Specifications Table (Stripe/Vercel Developer Format) -->
+  <section id="specifications" class="section-pad bg-inset">
+    <div class="site-container">
+      
+      <div class="section-head">
+        <div class="section-tag">VERIFIABLE PARAMETERS</div>
+        <h2 class="section-title">Technical Specification & Security Architecture</h2>
+        <p class="section-subtitle">
+          Smart contract immutable constants, token mechanics, and security parameters deployed on Robinhood Chain.
+        </p>
+      </div>
+
+      <div class="panel-card table-panel">
+        <table class="spec-table" aria-label="Technical Specifications">
+          <thead>
+            <tr>
+              <th scope="col" class="th-param">Parameter</th>
+              <th scope="col" class="th-value">Value / On-Chain State</th>
+              <th scope="col" class="th-notes">Notes & Verification</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="td-key">Contract Address</td>
+              <td class="td-val font-mono text-accent">SOON... (Deploying on Pons v2)</td>
+              <td class="td-note">Will be verified on Robinhood Chain Block Explorer upon launch</td>
+            <tr>
+              <td class="td-key">Token Standard</td>
+              <td class="td-val font-mono">ERC-20 (Fixed Supply)</td>
+              <td class="td-note">No mint function, no blacklist, no proxy upgradeability</td>
+            </tr>
+            <tr>
+              <td class="td-key">Network / Chain ID</td>
+              <td class="td-val font-mono">Robinhood Chain L2 (92001)</td>
+              <td class="td-note">High-throughput EVM execution layer</td>
+            </tr>
+            <tr>
+              <td class="td-key">Quote Asset</td>
+              <td class="td-val font-mono">NVDA (Tokenized Stock)</td>
+              <td class="td-note">NVIDIA tokenized equity representation</td>
+            </tr>
+            <tr>
+              <td class="td-key">Total Supply</td>
+              <td class="td-val font-mono">1,000,000,000 DREAMS</td>
+              <td class="td-note">100% deployed to initial bonding curve</td>
+            </tr>
+            <tr>
+              <td class="td-key">Trading Tax Structure</td>
+              <td class="td-val font-mono">1.8% (180 BPS)</td>
+              <td class="td-note">Automated routing via Pons FeeEscrow smart contract</td>
+            </tr>
+            <tr>
+              <td class="td-key">Anti-Snipe Protection</td>
+              <td class="td-val font-mono">99% Penalty Decay (5s)</td>
+              <td class="td-note">Decays to 0% over 5 seconds post-deployment</td>
+            </tr>
+            <tr>
+              <td class="td-key">Liquidity Lock</td>
+              <td class="td-val font-mono">LaunchLocker (Uniswap v4)</td>
+              <td class="td-note">100% LP burned permanently on graduation</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 8. No-Fluff Technical FAQ (Accessible Accordion) -->
+  <section id="faq" class="section-pad">
+    <div class="site-container-narrow">
+      
+      <div class="section-head">
+        <div class="section-tag">KNOWLEDGE BASE</div>
+        <h2 class="section-title">Technical FAQ</h2>
+        <p class="section-subtitle">
+          Clear answers regarding the bonding curve mechanics, $NVDA dividends, and network integration.
+        </p>
+      </div>
+
+      <div class="accordion-list">
+        
+        <div class="panel-card accordion-item active">
+          <button class="accordion-header" aria-expanded="true" aria-controls="faq-ans-1">
+            <span class="accordion-title">What is NVIDIA OmniDreams ($DREAMS)?</span>
+            <span class="accordion-icon font-mono">+</span>
+          </button>
+          <div id="faq-ans-1" class="accordion-content">
+            <p>
+              NVIDIA OmniDreams is a decentralized token protocol inspired by foundational generative spatial simulation models from NVIDIA Research and Toronto AI Lab. It introduces tokenized equity dividend mechanics to the Robinhood Chain, enabling holders to earn tokenized $NVDA shares directly on secondary volume.
+            </p>
+          </div>
+        </div>
+
+        <div class="panel-card accordion-item">
+          <button class="accordion-header" aria-expanded="false" aria-controls="faq-ans-2">
+            <span class="accordion-title">How are $NVDA stock dividends calculated and distributed?</span>
+            <span class="accordion-icon font-mono">+</span>
+          </button>
+          <div id="faq-ans-2" class="accordion-content">
+            <p>
+              Every buy and sell transaction on the Pons v2 bonding curve and graduated Uniswap v4 pool applies a 1.8% protocol tax. The fee is routed directly into the Pons FeeEscrow contract and distributed in tokenized $NVDA stock / ETH pro-rata to token holders without requiring staking locks.
+            </p>
+          </div>
+        </div>
+
+        <div class="panel-card accordion-item">
+          <button class="accordion-header" aria-expanded="false" aria-controls="faq-ans-3">
+            <span class="accordion-title">What wallet and network parameters are required to trade?</span>
+            <span class="accordion-icon font-mono">+</span>
+          </button>
+          <div id="faq-ans-3" class="accordion-content">
+            <p>
+              $DREAMS operates on Robinhood Chain (EVM L2, Chain ID 92001). You can trade using Rabby, MetaMask, or any EVM-compatible wallet on Pons Launchpad v2. Recommended slippage tolerance is set between 2.5% and 3.5% to account for bonding curve execution and the 1.8% FeeEscrow tax.
+            </p>
+          </div>
+        </div>
+
+        <div class="panel-card accordion-item">
+          <button class="accordion-header" aria-expanded="false" aria-controls="faq-ans-4">
+            <span class="accordion-title">How is liquidity secured upon bonding curve graduation?</span>
+            <span class="accordion-icon font-mono">+</span>
+          </button>
+          <div id="faq-ans-4" class="accordion-content">
+            <p>
+              When the market cap reaches the $68,000 threshold, 100% of accumulated reserve assets are automatically migrated to a Uniswap v4 liquidity pool via Pons LaunchLocker and permanently burned on-chain.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 9. Clean Minimalist Footer -->
+  <footer class="footer-bar">
+    <div class="site-container footer-content">
+      
+      <div class="footer-left">
+        <img src="emblem.svg" alt="OmniDreams Emblem" class="footer-logo">
+        <span class="footer-brand">NVIDIA OmniDreams ($DREAMS)</span>
+        <span class="footer-sep">·</span>
+        <span class="footer-net font-mono">Robinhood Chain L2 (92001)</span>
+      </div>
+
+      <div class="footer-links font-mono">
+        <a href="https://github.com/omnidreams/omnidreams-protocol" target="_blank" class="footer-link">GitHub</a>
+        <a href="https://research.nvidia.com/research-area/generative-ai" target="_blank" class="footer-link">Research Paper</a>
+        <a href="https://ponsfamily.com/launchpad/create" target="_blank" class="footer-link">Pons v2</a>
+        <a href="https://x.com/Gemesis_Group" target="_blank" class="footer-link">Twitter (X)</a>
+        <a href="https://explorer.robinhood.com" target="_blank" class="footer-link">Explorer</a>
+    </div>
+  </footer>
+
+  <!-- Toast Notification for CA Copy -->
+  <div id="copy-toast" class="toast-popup" role="alert" aria-live="polite">
+    <svg class="svg-icon-sm text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+    </svg>
+    <span class="toast-text font-mono">Contract address copied!</span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

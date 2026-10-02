@@ -1,0 +1,37 @@
+=== TWITTER / X PROFILE SETUP: NVIDIA OmniDreams ($DREAMS) ===
+
+[DISPLAY NAME]
+NVIDIA OmniDreams ($DREAMS)
+
+[HANDLE SUGGESTIONS]
+@OmniDreams_AI
+@OmniDreams_RH
+@OmniDreams_HOOD
+
+[ВАЖНО: ПОЛЕ ДЛЯ ССЫЛКИ]
+Ссылку https://research.nvidia.com/research-area/generative-ai
+вставляйте в отдельное поле «Website» (Сайт) в настройках профиля X, а НЕ внутрь самого текста Bio!
+
+
+[ВАРИАНТЫ БИО (СТРОГО МЕНЬШЕ 160 СИМВОЛОВ С ЗАПАСОМ)]
+
+Вариант 1 — Буллеты (111 символов, идеален для крипто-профилей):
+• World models by @NVIDIA Research
+• Spatial AI on Robinhood Chain ($HOOD)
+• Earn $NVDA stock rewards on volume
+
+Вариант 2 — Компактный с тегом платформы (120 символов):
+World models by @NVIDIA Research on Robinhood Chain ($HOOD). Earn tokenized $NVDA on volume. Fair launch @PonsFamily v2.
+
+Вариант 3 — Чистый технологический нарратив (109 символов):
+Generative world models inspired by @NVIDIA Research on Robinhood Chain ($HOOD). Earn $NVDA on volume spikes.
+
+Вариант 4 — Расширенный (150 символов):
+Real-time generative world model protocol inspired by @NVIDIA Research. Spatial simulation on Robinhood Chain ($HOOD). Earn tokenized $NVDA on volume.
+
+
+[LOCATION / МЕСТОПОЛОЖЕНИЕ]
+Santa Clara, CA / Robinhood Chain
+
+[WEBSITE URL / ПОЛЕ «САЙТ»]
+https://research.nvidia.com/research-area/generative-ai

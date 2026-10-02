@@ -1,0 +1,71 @@
+{
+  "network": {
+    "name": "Robinhood Chain",
+    "short_name": "HOOD",
+    "chain_id": 92001,
+    "rpc_url": "https://rpc.robinhood.com",
+    "explorer_url": "https://explorer.robinhood.com",
+    "native_currency": {
+      "name": "Ether",
+      "symbol": "ETH",
+      "decimals": 18
+    }
+  },
+  "launchpad": {
+    "protocol": "Pons Launchpad v2",
+    "create_url": "https://ponsfamily.com/launchpad/create",
+    "base_token_url_template": "https://www.ponsfamily.com/launchpad/{CA}",
+    "router_type": "BondingCurve",
+    "dex_graduation": "Uniswap v4",
+    "locker": "LaunchLocker (Permanent Lock)",
+    "fee_escrow": "Pons FeeEscrow"
+  },
+  "token": {
+    "name": "NVIDIA OmniDreams",
+    "symbol": "DREAMS",
+    "ticker": "$DREAMS",
+    "total_supply": "1000000000",
+    "decimals": 18,
+    "quote_token": "NVDA",
+    "quote_token_symbol": "NVDA",
+    "quote_token_type": "Tokenized Stock (Robinhood Chain)",
+    "creator_tax_bps": 180,
+    "creator_tax_percent": 1.8,
+    "anti_snipe_decay_sec": 5,
+    "anti_snipe_penalty_bps": 9900
+  },
+  "financials": {
+    "initial_dev_buy_eth": 0.15,
+    "initial_market_cap_usd": 3800,
+    "graduation_market_cap_usd": 68000,
+    "estimated_dev_initial_supply_share_pct": 5.8,
+    "exit_strategy": {
+      "tp_1": {
+        "multiplier": 2.0,
+        "market_cap_usd": 7600,
+        "sell_dev_pct": 30.0,
+        "objective": "Recover 100% initial ETH principal (~0.15 ETH)"
+      },
+      "tp_2": {
+        "multiplier": 4.0,
+        "market_cap_usd": 15200,
+        "sell_dev_pct": 30.0,
+        "objective": "Lock net capital profit (~0.30 - 0.45 ETH)"
+      },
+      "moonbag_hold": {
+        "market_cap_usd": 68000,
+        "sell_dev_pct": 40.0,
+        "objective": "Ride through graduation to Uniswap v4"
+      }
+    },
+    "tax_revenue_projection": {
+      "tax_rate_pct": 1.8,
+      "payout_currency": "NVDA / ETH",
+      "projected_volumes": [
+        {"volume_usd": 20000, "creator_tax_usd": 360},
+        {"volume_usd": 50000, "creator_tax_usd": 900},
+        {"volume_usd": 100000, "creator_tax_usd": 1800}
+      ]
+    }
+  }
+}

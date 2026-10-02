@@ -1,0 +1,27 @@
+{
+  "name": "NVIDIA OmniDreams",
+  "symbol": "DREAMS",
+  "ticker": "$DREAMS",
+  "description": "Real-time generative world model protocol powered by NVIDIA Research architecture. Bringing autonomous spatial simulation and AI closed-loop synthetic intelligence to Robinhood Chain ($HOOD), paired with tokenized NVDA.",
+  "narrative": "NVIDIA Research World Models & Spatial Generative AI",
+  "quote_token": "NVDA",
+  "tax": "1.8%",
+  "tax_bps": 180,
+  "website": "https://research.nvidia.com/research-area/generative-ai",
+  "research_paper_url": "https://research.nvidia.com/labs/toronto-ai/projects/omnidreams/",
+  "fallback_research_url": "https://research.nvidia.com/research-area/generative-ai",
+  "twitter": "https://x.com/Gemesis_Group",
+  "telegram": "https://t.me/OmniDreams_AI",
+  "logo": "media/logo.png",
+  "banner": "media/banner.png",
+  "tags": [
+    "AI",
+    "NVIDIA",
+    "WorldModel",
+    "Robinhood",
+    "HOOD",
+    "NVDA",
+    "Pons"
+  ],
+  "creator_notes": "Fair launch on Pons v2. 100% of supply deposited to bonding curve. LP permanently locked in LaunchLocker on graduation."
+}

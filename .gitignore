@@ -1,0 +1,17 @@
+# Dependencies & Caches
+node_modules/
+.bun/
+*.pyc
+__pycache__/
+
+# System & IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local plans and temporary notes
+*.txt
+!launch_package/social_pack/*.txt
+hood_charts_*.json
+hood_tokens*.json

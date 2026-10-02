@@ -1,0 +1,35 @@
+=== PINNED LAUNCH TWEET: NVIDIA OmniDreams ($DREAMS) ===
+
+[OPTION 1: FULL LAUNCH THREAD / X PREMIUM FORMAT (RECOMMENDED)]
+Introducing NVIDIA OmniDreams ($DREAMS) 🌌
+
+Bridging @NVIDIA Research's foundational World Model architecture to Robinhood Chain ($HOOD).
+
+⚡ Real-time closed-loop spatial intelligence
+📈 1.8% Creator & Holder tax distributed in tokenized $NVDA
+🔒 100% Fair Launch on @PonsFamily v2 — LP permanently locked upon graduation
+
+Contract (CA): [INSERT_CA_HERE]
+Launchpad: https://www.ponsfamily.com/launchpad/[INSERT_CA_HERE]
+Research Paper: https://research.nvidia.com/research-area/generative-ai
+
+#NVIDIA #Robinhood #AI #DREAMS $NVDA $ETH
+
+
+[OPTION 2: COMPACT FORMAT (STRICTLY UNDER 280 CHARACTERS FOR NON-PREMIUM ACCOUNTS)]
+Introducing NVIDIA OmniDreams ($DREAMS) 🌌
+
+World Models on Robinhood Chain ($HOOD).
+⚡ Spatial intelligence
+📈 1.8% Tax in $NVDA
+🔒 Fair Launch @PonsFamily v2
+
+CA: [INSERT_CA_HERE]
+https://ponsfamily.com/launchpad/[INSERT_CA_HERE]
+
+
+[INSTRUCTIONS FOR LAUNCH DAY]
+1. Once deployed on Pons v2, copy the Contract Address (CA).
+2. Replace both instances of [INSERT_CA_HERE] with the real 0x address.
+3. Attach media/banner.png or media/logo.png to the tweet.
+4. Pin the tweet immediately to your profile page.

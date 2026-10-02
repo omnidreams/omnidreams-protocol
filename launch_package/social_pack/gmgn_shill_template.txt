@@ -1,0 +1,29 @@
+=== GMGN & TELEGRAM / DISCORD ALPHA CALLOUT TEMPLATE ===
+
+[TEMPLATE: HIGH CONVERSION TRENCHES CALLOUT]
+🚨 GEM ALERT: NVIDIA OmniDreams ($DREAMS) 🌌
+Chain: Robinhood Chain (HOOD)
+Launchpad: Pons Launchpad v2
+
+🧠 Tech Narrative: Real-time Generative World Models based on NVIDIA Research (Autonomous spatial intelligence & physics simulation)
+📊 Quote Pair: NVDA (Tokenized NVIDIA Stock)
+💰 Creator & Volume Tax: 1.8% distributed in $NVDA / ETH
+🛡️ Anti-Snipe: Built-in 99% decay on Pons v2
+🔒 Liquidity: 100% fair curve -> Permanently locked via LaunchLocker upon Uniswap v4 graduation
+
+📈 Metrics & Strategy:
+• Initial MC: ~$3.8K
+• Target Graduation MC: ~$68K
+• Dev Allocation: Fair 0.15 ETH buy (clean dev profile, no multi-wallet insider cabal)
+• Dev Tax: Low 1.8% (fully compliant, no red flags on GMGN scanner)
+
+🔗 Links:
+• Contract (CA): [INSERT_CA_HERE]
+• Pons Launchpad: https://www.ponsfamily.com/launchpad/[INSERT_CA_HERE]
+• Twitter: https://x.com/Gemesis_Group
+• Nvidia Research: https://research.nvidia.com/research-area/generative-ai
+
+💡 How to Buy:
+1. Connect Rabby / MetaMask on Robinhood Chain (Chain ID: 92001)
+2. Swap ETH or NVDA on Pons Launchpad: https://www.ponsfamily.com/launchpad/[INSERT_CA_HERE]
+3. Set slippage: 2.5% - 3.5% (accounts for 1.8% tax + curve impact)
