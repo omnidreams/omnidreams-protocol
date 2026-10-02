@@ -1,7 +1,11 @@
 /**
  * @omnidreams/sdk - Integration Toolkit & Mathematical Engine
- * Core pricing, FeeEscrow tax routing and bonding curve telemetry.
+ * Core pricing, FeeEscrow tax routing, bonding curve telemetry and neural simulation pipelines.
  */
+
+export * from "./telemetry.mjs";
+export * from "./escrow.mjs";
+export * from "./curve.mjs";
 
 export const CONSTANTS = {
   TOTAL_SUPPLY: 1_000_000_000n,
