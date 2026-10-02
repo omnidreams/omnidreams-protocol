@@ -8,7 +8,7 @@
   <strong>Generative World Models. Onchain Spatial Compute.</strong><br>
   <em>One transaction. Fixed supply ERC-20. Real Pons v2 bonding curve. Automated $NVDA stock yield.</em>
   <a href="https://github.com/omnidreams/omnidreams-protocol/releases"><img src="https://img.shields.io/github/v/release/omnidreams/omnidreams-protocol?style=flat-square&color=A3E635&label=release" alt="Release"></a>
-  <img src="https://img.shields.io/badge/Tests-7%20passed-111111?style=flat-square&logo=github&color=A3E635" alt="Tests">
+  <img src="https://img.shields.io/badge/Tests-23%20passed-111111?style=flat-square&logo=github&color=A3E635" alt="Tests">
   <a href="https://omnidreams.xyz"><img src="https://img.shields.io/badge/Website-omnidreams.xyz-111111?style=flat-square&logo=google-chrome&logoColor=A3E635" alt="Website"></a>
   <a href="https://x.com/Gemesis_Group"><img src="https://img.shields.io/badge/Twitter-@Gemesis__Group-111111?style=flat-square&logo=x&logoColor=white" alt="Twitter"></a>
   <a href="https://ponsfamily.com/launchpad/create"><img src="https://img.shields.io/badge/Launchpad-Pons%20v2-111111?style=flat-square&logo=ethereum&logoColor=A3E635" alt="Launchpad"></a>
@@ -34,14 +34,18 @@ The open contract engine and developer SDK behind **NVIDIA OmniDreams ($DREAMS)*
 │   ├── OmniDreamsToken.sol       # Production ERC-20 fixed-supply token
 │   └── FeeEscrowDistributor.sol  # 1.8% volume routing to tokenized $NVDA shares
 ├── sdk/
-│   └── index.mjs                 # Integration toolkit, integer math & fee preview
+│   ├── index.mjs                 # Unified exports and pricing constants
+│   ├── telemetry.mjs             # Spatial neural latency & stability monitoring
+│   ├── escrow.mjs                # FeeEscrow dividend routing and pro-rata pools
+│   └── curve.mjs                 # Bonding curve integral dynamics & anti-snipe
 ├── docs/
 │   ├── ARCHITECTURE.md           # Mathematical tokenomics & FeeEscrow mechanics
 │   └── DEPLOYMENT.md             # Onchain verification & Robinhood Chain L2 parameters
 ├── examples/
-│   └── preview.mjs               # Offline runnable integration preview
+│   ├── preview.mjs               # Offline runnable integration preview
+│   └── simulation_runner.mjs     # Live world model telemetry stream runner
 ├── test/
-│   └── sdk.test.mjs              # Automated mathematical & invariant unit tests
+│   └── sdk.test.mjs              # 23 automated mathematical & invariant unit tests
 ├── website/                      # High-density dark engineering landing page
 ├── foundry.toml                  # Pinned Solidity 0.8.20 compiler configuration
 ├── CONTRIBUTING.md               # Developer contribution guidelines
@@ -71,12 +75,12 @@ The open contract engine and developer SDK behind **NVIDIA OmniDreams ($DREAMS)*
 ```bash
 git clone https://github.com/omnidreams/omnidreams-protocol.git
 cd omnidreams-protocol
-bun test
+node test/sdk.test.mjs
 ```
 
-### Run SDK Example
+### Run Live Simulation Pipeline
 ```bash
-bun examples/preview.mjs
+node examples/simulation_runner.mjs
 ```
 
 ---
