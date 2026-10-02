@@ -1,0 +1,21 @@
+name: bug_report
+description: Create a bug report to help us improve
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for contributing to the OmniDreams Protocol issue tracker.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us what you expected to happen.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Robinhood Chain RPC / OS / Tooling version
+    validations:
+      required: false
